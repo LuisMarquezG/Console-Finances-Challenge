@@ -87,6 +87,12 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
+// Heading
+var title = "Financial Analysis";
+console.log(title);
+
+
+
 
 
 
