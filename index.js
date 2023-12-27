@@ -96,6 +96,12 @@ var numberOfMonths = finances.length;
 console.log(`Total Months: ${numberOfMonths}`);
 
 //Calculating the gross amount
+//I am creating a var that will contain the total amount, to get that I am using a for loop that will add every amount in the array.
+var totalAmount = 0;
+for(amount = 0; amount < numberOfMonths; amount++) {
+  totalAmount += finances[amount][1];
+}
+console.log(`The net total amount is $${totalAmount}`);
 
 
 
