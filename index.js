@@ -91,6 +91,13 @@ var finances = [
 var title = "Financial Analysis";
 console.log(title);
 
+//Calculating number of elements in the array
+var numberOfMonths = finances.length;
+console.log(`Total Months: ${numberOfMonths}`);
+
+//Calculating the gross amount
+
+
 
 
 
