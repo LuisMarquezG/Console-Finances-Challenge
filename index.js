@@ -106,27 +106,28 @@ for(amount = 0; amount < numberOfMonths; amount++) {
 
 
 
-//Calculating Average Amount
-// I am using to vars for storage the result and the difference and I will be using the in the for loop and the log, one for helpme to find the value that I need and the another for round to an close figure that I need according to the challenge.
+//Calculating the changes in profit/losses
+// DO NOT FORGET TO TYPE HERE WHAT YOUR ARE DOING NOW ON THIS LOGIC
 
-//DO NOT FORGET TO HAVE A SECOND LOOK IN THIS LOGIC, SHOULD BE A BETTER WAY TO DO IT  
-var valueX = 0;
-var diff = 7777.88;
-
-for (amount = 0; amount < numberOfMonths; amount++) {
-   var averageAmount = Number(finances[amount][1] - Number(valueX)); 
+//REMEMBER TO CREATE A VAR WHERE YOU CAN INCLUDE ==> (Total/(Number of months - 1) AND USE THAT VAR TO LOG THE RESULT. AND DO NOT FORGET TO SEARCH FOR HOW TO SHOW JUST TWO DECIMALS ON THE RESULT.
+var changes = [];
+for (index = 1; index < numberOfMonths; index++) {
+    changes.push(finances[index][1] - finances[index - 1][1]); 
 }
-console.log(`Average change: $${Math.round(diff - finances[0][1] / numberOfMonths -1)}`);
+
 
 //Tomorrow start here, I do not know what I am going to do. I do not know if I can finish thsi challenge, do not forget to delete this comment.
 
-// Calculating Greatest Incresase in Profits/Losses.
+// Calculating the greatest incresase in Profits/Losses.
+
+// Calculating the greatest decrease in profit/losses
 
 
 //Output results
 console.log(title);
 console.log(`Total Months: ${numberOfMonths}`);
 console.log(`The net total amount is: $${totalAmount}`);
+// console.log(`Average change: $${});
 
 
 
