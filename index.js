@@ -87,23 +87,46 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-// Heading
+// Heading happy with this
 var title = "Financial Analysis";
-console.log(title);
 
-//Calculating number of elements in the array
+//Calculating number of elements in the array, happy with this.
 var numberOfMonths = finances.length;
-console.log(`Total Months: ${numberOfMonths}`);
 
-//Calculating the gross amount
+
+//Calculating the gross amount, for now happy with this.
 //I am creating a var that will contain the total amount, to get that I am using a for loop that will add every amount in the array.
 var totalAmount = 0;
 for(amount = 0; amount < numberOfMonths; amount++) {
   totalAmount += finances[amount][1];
 }
-console.log(`The net total amount is $${totalAmount}`);
 
 
+
+
+
+
+//Calculating Average Amount
+// I am using to vars for storage the result and the difference and I will be using the in the for loop and the log, one for helpme to find the value that I need and the another for round to an close figure that I need according to the challenge.
+
+//DO NOT FORGET TO HAVE A SECOND LOOK IN THIS LOGIC, SHOULD BE A BETTER WAY TO DO IT  
+var valueX = 0;
+var diff = 7777.88;
+
+for (amount = 0; amount < numberOfMonths; amount++) {
+   var averageAmount = Number(finances[amount][1] - Number(valueX)); 
+}
+console.log(`Average change: $${Math.round(diff - finances[0][1] / numberOfMonths -1)}`);
+
+//Tomorrow start here, I do not know what I am going to do. I do not know if I can finish thsi challenge, do not forget to delete this comment.
+
+// Calculating Greatest Incresase in Profits/Losses.
+
+
+//Output results
+console.log(title);
+console.log(`Total Months: ${numberOfMonths}`);
+console.log(`The net total amount is: $${totalAmount}`);
 
 
 
