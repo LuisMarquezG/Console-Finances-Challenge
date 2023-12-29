@@ -115,7 +115,7 @@ var averageChange = totalChange / (numberOfMonths - 1);
 
 // Calculating the greatest incresase in Profits/Losses. => To understand this logic please go to READ.ME
 var maxIncrease = Math.max(...changes);//Math.max shows me the largest number in changes, Raul told me about '...', remember to read about that.
-var maxIncreaseIndex = changes.indexOf(maxIncrease);//indexOF shows me where to find the figure in the array
+var maxIncreaseIndex = changes.indexOf(maxIncrease);//indexOf shows me where to find the figure in the array
 var maxIncreaseMonth = finances[maxIncreaseIndex + 1][0];
 
 // Calculating the greatest decrease in profit/losses
