@@ -87,6 +87,8 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
+//From line 92 to line 120 all is tested and working DO NOT TOUCH IT Please.
+
 // Heading happy with this
 var title = "Financial Analysis";
 
@@ -110,10 +112,8 @@ for (index = 1; index < numberOfMonths; index++) {
     changes.push(finances[index][1] - finances[index - 1][1]); 
 }
 
-//REMEMBER TO CREATE A VAR WHERE YOU CAN INCLUDE ==> (Total/(Number of months - 1) AND USE THAT VAR TO LOG THE RESULT. AND DO NOT FORGET TO SEARCH FOR HOW TO SHOW JUST TWO DECIMALS ON THE RESULT.
-
 var totalChange = 0;
-for (var omega = 0; omega < numberOfMonths; omega++) {
+for (var omega = 0; omega < changes.length; omega++) {
   totalChange += changes[omega];
 }
 
@@ -133,11 +133,17 @@ var averageChange = totalChange / (numberOfMonths - 1);
 // Calculating the greatest decrease in profit/losses
 
 
+
+
+
+
+
+
 //Output results
 console.log(title);
 console.log(`Total Months: ${numberOfMonths}`);
 console.log(`The net total amount is: $${totalAmount}`);
-console.log(`Average change: $${averageChange}`); //Why the result is NaN????? helppppppppppppppppppppppppp!
+console.log(`Average change: $${averageChange}`); //finally is printing in console, do not forget search how to show just 2 decimals.
 
 
 
