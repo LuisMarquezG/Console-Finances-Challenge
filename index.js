@@ -89,7 +89,7 @@ var finances = [
 
 
 // Heading 
-var title = "Financial Analysis";
+var title = "Financial Analysis, by Luis Marquez-Garrido";
 
 //Calculating the number of elements in the array.  => To understand this logic please go to README.MD
 var numberOfMonths = finances.length;
