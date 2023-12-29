@@ -91,34 +91,34 @@ var finances = [
 // Heading 
 var title = "Financial Analysis";
 
-//Calculating number of elements in the array.  => To understand this logic please go to READ.ME
+//Calculating the number of elements in the array.  => To understand this logic please go to README.MD
 var numberOfMonths = finances.length;
 
-//Calculating the gross amount, for now happy with this. => To understand this logic please go to READ.ME
+//Calculating the gross amount => To understand this logic please go to README.MD
 var totalAmount = 0;
 for(amount = 0; amount < numberOfMonths; amount++) {
   totalAmount += finances[amount][1];
 }
 
-//Calculating the changes in profit/losses => To understand this logic please go to READ.ME
+//Calculating the changes in profit/losses => To understand this logic please go to README.MD
 var changes = [];
 for (index = 1; index < numberOfMonths; index++) {
     changes.push(finances[index][1] - finances[index - 1][1]); 
 }
 
-// Calculate the average of the changes in Profit/Losses over the entire period
+// Calculate the average of the changes in Profit/Losses over the entire period.  => To understand this logic please go to README.MD
 var totalChange = 0;
 for (var omega = 0; omega < changes.length; omega++) {
   totalChange += changes[omega];
 }
 var averageChange = totalChange / (numberOfMonths - 1);
 
-// Calculating the greatest incresase in Profits/Losses. => To understand this logic please go to READ.ME
+// Calculating the greatest incresase in Profits/Losses. => To understand this logic please go to README.MD
 var maxIncrease = Math.max(...changes);//Math.max shows me the largest number in changes, Raul told me about '...', remember to read about that.
 var maxIncreaseIndex = changes.indexOf(maxIncrease);//indexOf shows me where to find the figure in the array
 var maxIncreaseMonth = finances[maxIncreaseIndex + 1][0];
 
-// Calculating the greatest decrease in profit/losses
+// Calculating the greatest decrease in profit/losses. => To understand this logic please go to README.MD
 //Now I am going to apply the same logic than before but changing the vars to 'decrease' and hopefully will work.
 var maxDecrease = Math.min(...changes);//Math.min shows me the smallest number in array changes.
 var maxDecreaseIndex = changes.indexOf(maxDecrease);
