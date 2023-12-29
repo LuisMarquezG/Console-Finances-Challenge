@@ -101,19 +101,29 @@ for(amount = 0; amount < numberOfMonths; amount++) {
   totalAmount += finances[amount][1];
 }
 
-
-
-
-
-
 //Calculating the changes in profit/losses
 // DO NOT FORGET TO TYPE HERE WHAT YOUR ARE DOING NOW ON THIS LOGIC
 
-//REMEMBER TO CREATE A VAR WHERE YOU CAN INCLUDE ==> (Total/(Number of months - 1) AND USE THAT VAR TO LOG THE RESULT. AND DO NOT FORGET TO SEARCH FOR HOW TO SHOW JUST TWO DECIMALS ON THE RESULT.
+
 var changes = [];
 for (index = 1; index < numberOfMonths; index++) {
     changes.push(finances[index][1] - finances[index - 1][1]); 
 }
+
+//REMEMBER TO CREATE A VAR WHERE YOU CAN INCLUDE ==> (Total/(Number of months - 1) AND USE THAT VAR TO LOG THE RESULT. AND DO NOT FORGET TO SEARCH FOR HOW TO SHOW JUST TWO DECIMALS ON THE RESULT.
+
+var totalChange = 0;
+for (var omega = 0; omega < numberOfMonths; omega++) {
+  totalChange += changes[omega];
+}
+
+var averageChange = totalChange / (numberOfMonths - 1);
+
+
+
+
+
+
 
 
 //Tomorrow start here, I do not know what I am going to do. I do not know if I can finish thsi challenge, do not forget to delete this comment.
@@ -127,7 +137,7 @@ for (index = 1; index < numberOfMonths; index++) {
 console.log(title);
 console.log(`Total Months: ${numberOfMonths}`);
 console.log(`The net total amount is: $${totalAmount}`);
-// console.log(`Average change: $${});
+console.log(`Average change: $${averageChange}`); //Why the result is NaN????? helppppppppppppppppppppppppp!
 
 
 
