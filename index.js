@@ -87,14 +87,12 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-//From line 92 to line 120 all is tested and working DO NOT TOUCH IT Please.
 
-// Heading happy with this
+// Heading 
 var title = "Financial Analysis";
 
 //Calculating number of elements in the array.  => To understand this logic please go to READ.ME
 var numberOfMonths = finances.length;
-
 
 //Calculating the gross amount, for now happy with this. => To understand this logic please go to READ.ME
 var totalAmount = 0;
@@ -108,6 +106,7 @@ for (index = 1; index < numberOfMonths; index++) {
     changes.push(finances[index][1] - finances[index - 1][1]); 
 }
 
+// Calculate the average of the changes in Profit/Losses over the entire period
 var totalChange = 0;
 for (var omega = 0; omega < changes.length; omega++) {
   totalChange += changes[omega];
@@ -121,30 +120,12 @@ var maxIncreaseMonth = finances[maxIncreaseIndex + 1][0];
 
 // Calculating the greatest decrease in profit/losses
 //Now I am going to apply the same logic than before but changing the vars to 'decrease' and hopefully will work.
-var maxDecrease = Math.min(...changes);
+var maxDecrease = Math.min(...changes);//Math.min shows me the smallest number in array changes.
 var maxDecreaseIndex = changes.indexOf(maxDecrease);
 var maxDecreaseMonth = finances[maxDecreaseIndex + 1][0];
 
-
-
-
-
-
-
-//Tomorrow start here, I do not know what I am going to do. I do not know if I can finish thsi challenge, do not forget to delete this comment.
-
-
-
-
-
-
-
-
-
-
-
-
 //Output results
+
 console.log(title);
 console.log(`Total Months: ${numberOfMonths}`);
 console.log(`The net total amount is: $${totalAmount}`);
