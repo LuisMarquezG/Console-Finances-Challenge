@@ -96,14 +96,14 @@ var numberOfMonths = finances.length;
 
 //Calculating the gross amount => To understand this logic please go to README.MD
 var totalAmount = 0;
-for(amount = 0; amount < numberOfMonths; amount++) {
+for (amount = 0; amount < numberOfMonths; amount++) {
   totalAmount += finances[amount][1];
 }
 
 //Calculating the changes in profit/losses => To understand this logic please go to README.MD
 var changes = [];
 for (index = 1; index < numberOfMonths; index++) {
-    changes.push(finances[index][1] - finances[index - 1][1]); 
+  changes.push(finances[index][1] - finances[index - 1][1]);
 }
 
 // Calculate the average of the changes in Profit/Losses over the entire period.  => To understand this logic please go to README.MD
@@ -132,8 +132,3 @@ console.log(`The net total amount is: $${totalAmount}`);
 console.log(`Average change: $${averageChange.toFixed(2)}`); //The toFixed() method of Number values formats this number using fixed-point notation. Taken from mdm.
 console.log(`Greatest Increase in Profits: ${maxIncreaseMonth} ($${maxIncrease})`);
 console.log(`Greatest Increase in Profits: ${maxDecreaseMonth} ($${maxDecrease})`);
-
-
-
-
-
