@@ -97,7 +97,6 @@ var numberOfMonths = finances.length;
 
 
 //Calculating the gross amount, for now happy with this. => To understand this logic please go to READ.ME
-//I am creating a var that will contain the total amount, to get that I am using a for loop that will add every amount in the array.
 var totalAmount = 0;
 for(amount = 0; amount < numberOfMonths; amount++) {
   totalAmount += finances[amount][1];
@@ -113,8 +112,13 @@ var totalChange = 0;
 for (var omega = 0; omega < changes.length; omega++) {
   totalChange += changes[omega];
 }
-
 var averageChange = totalChange / (numberOfMonths - 1);
+
+// Calculating the greatest incresase in Profits/Losses. => To understand this logic please go to READ.ME
+var maxIncrease = Math.max(...changes);//Math.max shows me the largest number in changes, Raul told me about '...', remember to read about that.
+var maxIncreaseIndex = changes.indexOf(maxIncrease);//indexOF shows me where to find the figure in the array
+var maxIncreaseMonth = finances[maxIncreaseIndex + 1][0];
+
 
 
 
@@ -125,7 +129,7 @@ var averageChange = totalChange / (numberOfMonths - 1);
 
 //Tomorrow start here, I do not know what I am going to do. I do not know if I can finish thsi challenge, do not forget to delete this comment.
 
-// Calculating the greatest incresase in Profits/Losses.
+
 
 // Calculating the greatest decrease in profit/losses
 
@@ -141,6 +145,8 @@ console.log(title);
 console.log(`Total Months: ${numberOfMonths}`);
 console.log(`The net total amount is: $${totalAmount}`);
 console.log(`Average change: $${averageChange.toFixed(2)}`); //The toFixed() method of Number values formats this number using fixed-point notation. Taken from mdm.
+console.log(`Greatest Increase in Profits: ${maxIncreaseMonth} ($${maxIncrease})`);
+// console.log(`Greatest Increase in Profits: ${maxDecreaseMonth} ($${maxDecrease})`);
 
 
 
