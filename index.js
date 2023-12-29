@@ -92,21 +92,18 @@ var finances = [
 // Heading happy with this
 var title = "Financial Analysis";
 
-//Calculating number of elements in the array, happy with this.
+//Calculating number of elements in the array.  => To understand this logic please go to READ.ME
 var numberOfMonths = finances.length;
 
 
-//Calculating the gross amount, for now happy with this.
+//Calculating the gross amount, for now happy with this. => To understand this logic please go to READ.ME
 //I am creating a var that will contain the total amount, to get that I am using a for loop that will add every amount in the array.
 var totalAmount = 0;
 for(amount = 0; amount < numberOfMonths; amount++) {
   totalAmount += finances[amount][1];
 }
 
-//Calculating the changes in profit/losses
-// DO NOT FORGET TO TYPE HERE WHAT YOUR ARE DOING NOW ON THIS LOGIC
-
-
+//Calculating the changes in profit/losses => To understand this logic please go to READ.ME
 var changes = [];
 for (index = 1; index < numberOfMonths; index++) {
     changes.push(finances[index][1] - finances[index - 1][1]); 
@@ -143,7 +140,7 @@ var averageChange = totalChange / (numberOfMonths - 1);
 console.log(title);
 console.log(`Total Months: ${numberOfMonths}`);
 console.log(`The net total amount is: $${totalAmount}`);
-console.log(`Average change: $${averageChange}`); //finally is printing in console, do not forget search how to show just 2 decimals.
+console.log(`Average change: $${averageChange.toFixed(2)}`); //The toFixed() method of Number values formats this number using fixed-point notation. Taken from mdm.
 
 
 
