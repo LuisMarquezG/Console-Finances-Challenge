@@ -119,7 +119,11 @@ var maxIncrease = Math.max(...changes);//Math.max shows me the largest number in
 var maxIncreaseIndex = changes.indexOf(maxIncrease);//indexOF shows me where to find the figure in the array
 var maxIncreaseMonth = finances[maxIncreaseIndex + 1][0];
 
-
+// Calculating the greatest decrease in profit/losses
+//Now I am going to apply the same logic than before but changing the vars to 'decrease' and hopefully will work.
+var maxDecrease = Math.min(...changes);
+var maxDecreaseIndex = changes.indexOf(maxDecrease);
+var maxDecreaseMonth = finances[maxDecreaseIndex + 1][0];
 
 
 
@@ -131,7 +135,7 @@ var maxIncreaseMonth = finances[maxIncreaseIndex + 1][0];
 
 
 
-// Calculating the greatest decrease in profit/losses
+
 
 
 
@@ -146,7 +150,7 @@ console.log(`Total Months: ${numberOfMonths}`);
 console.log(`The net total amount is: $${totalAmount}`);
 console.log(`Average change: $${averageChange.toFixed(2)}`); //The toFixed() method of Number values formats this number using fixed-point notation. Taken from mdm.
 console.log(`Greatest Increase in Profits: ${maxIncreaseMonth} ($${maxIncrease})`);
-// console.log(`Greatest Increase in Profits: ${maxDecreaseMonth} ($${maxDecrease})`);
+console.log(`Greatest Increase in Profits: ${maxDecreaseMonth} ($${maxDecrease})`);
 
 
 
